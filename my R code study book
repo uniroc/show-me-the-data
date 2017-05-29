@@ -1,0 +1,11 @@
+# this file is my note book in reading R code
+# learn new modeling skill
+# try to learn some useful codes to do things more convenient
+2017.5.29
+#in this page http://amunategui.github.io/fscaret-Walkthrough/index.html
+#using createDataPartition to do this subsample data for CV
+set.seed(1234)
+splitIndex <- createDataPartition(titanicDF$Survived, p = .75, list = FALSE, times = 1)
+trainDF <- titanicDF[ splitIndex,]
+testDF  <- titanicDF[-splitIndex,]
+
